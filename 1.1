@@ -1,0 +1,20 @@
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize, regexp_tokenize, TweetTokenizer
+text = "Samraddh Dixit 21BCS6637."
+words = word_tokenize(text)
+print("Word Tokenization:")
+print(words)
+sentences = sent_tokenize(text)
+print("\nSentence Tokenization:")
+print(sentences)
+pattern = r'\w+'
+regexp_tokens = regexp_tokenize(text, pattern)
+print("\nRegExp Tokenization:")
+print(regexp_tokens)
+tweet_tokenizer = TweetTokenizer()
+tweet_tokens = tweet_tokenizer.tokenize(text)
+print("\nTweet Tokenization:")
+print(tweet_tokens)
+split_tokens = text.split()
+print("\nSplit Tokenization")
+print(split_tokens)
